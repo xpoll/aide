@@ -61,7 +61,7 @@ public class FUtil {
 
 	public static FileInfo file(MultipartFile file) throws FileInfoException {
 		try {
-			return new FileInfo(Integer.valueOf(file.getBytes().length));
+			return new FileInfo(Integer.valueOf(file.getBytes().length), file.getBytes());
 		} catch (IOException e) {
 			throw new FileInfoException("Get file info failed.", e);
 		}
@@ -69,7 +69,7 @@ public class FUtil {
 
 	public static FileInfo file(File file) throws ImageInfoException {
 		try {
-			return new FileInfo(Integer.valueOf(Files.toByteArray(file).length));
+			return new FileInfo(Integer.valueOf(Files.toByteArray(file).length), Files.toByteArray(file));
 		} catch (IOException e) {
 			throw new ImageInfoException("Get file info failed.", e);
 		}
@@ -88,7 +88,7 @@ public class FUtil {
 				}
 
 				outputStream.flush();
-				fileInfo = new FileInfo(Integer.valueOf(outputStream.toByteArray().length));
+				fileInfo = new FileInfo(Integer.valueOf(outputStream.toByteArray().length), outputStream.toByteArray());
 			} finally {
 				if (outputStream != null) outputStream.close();
 			}

@@ -20,6 +20,7 @@
 		<guava.version>19.0</guava.version>
 		<jedis.version>2.9.0</jedis.version>
 		<aliyun-oss.version>2.5.0</aliyun-oss.version>
+		<qcloud-oss.version>4.4</qcloud-oss.version>
 		<kryo.version>4.0.0</kryo.version>
 		<jackson.version>2.8.7</jackson.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
@@ -117,6 +118,12 @@
 				<groupId>com.aliyun.oss</groupId>
 				<artifactId>aliyun-sdk-oss</artifactId>
 				<version>${aliyun-oss.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>com.qcloud</groupId>
+			    <artifactId>cos_api</artifactId>
+			    <version>${qcloud-oss.version}</version>
 			</dependency>
 			<!-- handlebars -->
 			<dependency>

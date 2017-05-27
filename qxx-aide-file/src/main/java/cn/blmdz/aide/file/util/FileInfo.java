@@ -12,4 +12,9 @@ import lombok.NoArgsConstructor;
 public class FileInfo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Integer size;
+	private byte[] bytes;
+	
+	public FileInfo(Integer size) {
+		this.size = size;
+	}
 }
