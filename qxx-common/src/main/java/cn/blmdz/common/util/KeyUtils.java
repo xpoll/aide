@@ -18,10 +18,15 @@ public abstract class KeyUtils {
         Preconditions.checkArgument(!Strings.isNullOrEmpty(id), "id can not be null");
         return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName()) + ":table:" + id;
     }
-    
-    public static <T> String entityIndex(Class<T> entityClass, String index) {
+
+    public static <T> String entityIndexOne(Class<T> entityClass, String index) {
         Preconditions.checkArgument(!Strings.isNullOrEmpty(index), "index can not be null");
-        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName()) + ":index:" + index;
+        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName()) + ":indexOne:" + index;
+    }
+    
+    public static <T> String entityIndexMore(Class<T> entityClass, String index) {
+        Preconditions.checkArgument(!Strings.isNullOrEmpty(index), "index can not be null");
+        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName()) + ":indexMore:" + index;
     }
 
 }
