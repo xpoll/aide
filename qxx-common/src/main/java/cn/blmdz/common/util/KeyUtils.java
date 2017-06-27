@@ -21,12 +21,11 @@ public abstract class KeyUtils {
 
     public static <T> String entityIndexOne(Class<T> entityClass, String index) {
         Preconditions.checkArgument(!Strings.isNullOrEmpty(index), "index can not be null");
-        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName()) + ":indexOne:" + index;
+        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName() + ":indexOne:" + index);
     }
     
     public static <T> String entityIndexMore(Class<T> entityClass, String index) {
         Preconditions.checkArgument(!Strings.isNullOrEmpty(index), "index can not be null");
-        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName()) + ":indexMore:" + index;
+        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_HYPHEN, entityClass.getSimpleName() + ":indexMore:" + index);
     }
-
 }
