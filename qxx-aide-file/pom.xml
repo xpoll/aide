@@ -24,10 +24,12 @@
 		<dependency>
 			<groupId>com.aliyun.oss</groupId>
 			<artifactId>aliyun-sdk-oss</artifactId>
+            <scope>provided</scope>
 		</dependency>
 		<dependency>
 		    <groupId>com.qcloud</groupId>
 		    <artifactId>cos_api</artifactId>
+            <scope>provided</scope>
 		</dependency>
 		
 		<dependency>
